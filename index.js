@@ -8,7 +8,7 @@ const server = require('./src/server.js');
 sequelize
   .sync()
   .then(() => {
-    app.start(PORT);
+    server.start(PORT);
   })
   .catch((e) => {
     console.error('Could not start server', e.message);
